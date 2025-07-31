@@ -41,7 +41,7 @@ pendingList.before(totalRequestsCounter);
 // 🛠️ Load Pending Requests
 async function loadRequests() {
   try {
-    const res = await fetch("http://localhost:5000/api/admin/requests", {
+    const res = await fetch("https://bloodbank-x8vr.onrender.com/api/admin/requests", {
       headers: { Authorization: `Bearer ${token}` },
     });
     const requests = await res.json();
@@ -82,7 +82,7 @@ async function loadRequests() {
 // 🧠 Update Request Status
 async function updateRequest(id, status) {
   try {
-    const res = await fetch(`http://localhost:5000/api/admin/request/${id}`, {
+    const res = await fetch(`https://bloodbank-x8vr.onrender.com/api/admin/request/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -105,7 +105,7 @@ async function updateRequest(id, status) {
 // 📊 Load Inventory Chart
 async function loadInventory() {
   try {
-    const res = await fetch("http://localhost:5000/api/admin/inventory", {
+    const res = await fetch("https://bloodbank-x8vr.onrender.com/api/admin/inventory", {
       headers: { Authorization: `Bearer ${token}` },
     });
 
@@ -166,7 +166,7 @@ async function loadInventory() {
 // 📊 Load Analytics Charts
 async function loadAnalytics() {
   try {
-    const res = await fetch("http://localhost:5000/api/admin/analytics", {
+    const res = await fetch("https://bloodbank-x8vr.onrender.com/admin/analytics", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
